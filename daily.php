@@ -1,13 +1,13 @@
 <?php
 
-// Avoir le contenu du fichier mots.txt 
+// Recuperer les mot dans le fichier
 $wordsFile = file_get_contents("mots.txt");
 $words = explode("\n", $wordsFile);
 
-// Hmm je veux qu'il prenne un mot au hazard 
+// Selectionner un mot aleatoirement
 $word = rtrim($words[array_rand($words)]);
 
-// Initialisation des mauvaises reponses
+// Initialisation de mauvaise reponse
 $incorrectGuesses = 0;
 
 // initialiser mon mot choisi par "-"
